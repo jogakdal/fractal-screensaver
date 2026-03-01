@@ -29,7 +29,9 @@ Get the latest version from the [Releases](https://github.com/jogakdal/fractal-s
 
 ## Screenshots
 
-(coming soon)
+![Fractal boundary with branching structures](screenshots/screenshot1.png)
+
+![Deep zoom into fractal coastline](screenshots/screenshot2.png)
 
 ## Support
 
