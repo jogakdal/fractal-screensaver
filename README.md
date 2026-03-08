@@ -1,49 +1,161 @@
-# FractalSaver
+# FractalSaver — Real-Time Mandelbrot Zoom Screen Saver for Windows
 
-A real-time Mandelbrot fractal screensaver for Windows with GPU-accelerated rendering.
+> Turn your idle screen into an infinite journey through the Mandelbrot set.
 
-## Features
+---
 
-- **GPU Acceleration**: D3D11 Compute Shader (cs_5_0) with double-float precision
-- **CPU Fallback**: AVX2 SIMD 8-wide parallel computation when GPU is unavailable
-- **100 Exploration Points**: 15 categories including Seahorse Valley, Elephant Valley, Spiral Galaxies, Mini Mandelbrot Copies, and more
-- **Smart Boundary Tracking**: Curvature-based filtering ensures the camera always follows visually interesting fractal boundaries
-- **Cosine Palette Coloring**: 4 styles (Smooth, Contour, Stripe, TIA) that cycle automatically
-- **Smooth Transitions**: FadeIn/Visible/FadeOut state machine animation
+## Gallery
 
-## Download
+| | |
+|:---:|:---:|
+| ![Screenshot 1](images/screenshot_01.png) | ![Screenshot 2](images/screenshot_02.png) |
+| ![Screenshot 3](images/screenshot_03.png) | ![Screenshot 4](images/screenshot_04.png) |
+| ![Screenshot 5](images/screenshot_05.png) | ![Screenshot 6](images/screenshot_06.png) |
 
-Get the latest version from the [Releases](https://github.com/jogakdal/fractal-screensaver/releases) page.
+![Magenta Theme Animation](images/magenta_animation.gif)
 
-## Installation
+---
 
-1. Download **fractal_screensaver_v1_install.exe** from the [Releases](https://github.com/jogakdal/fractal-screensaver/releases) page and run it
-2. Or download **FractalSaver.scr**, right-click > **Install**
-3. Or manually copy `FractalSaver.scr` to `C:\Windows\System32\`, then select it in Desktop > Personalize > Lock Screen > Screen Saver Settings
+## What is FractalSaver?
+
+FractalSaver is a free Windows screen saver that renders the Mandelbrot set in real time, continuously zooming into 100 hand-picked locations across 15 categories — from Seahorse Valleys and Spiral Galaxies to Misiurewicz Points and Mini Mandelbrot Copies.
+
+Every run is unique. The visit order is shuffled, zoom targets are randomly offset, and colors shift continuously, so you'll never see the same animation twice.
+
+---
+
+## Key Features
+
+### Dual Rendering Engine
+- **GPU mode**: D3D11 Compute Shader with double-float emulation (~48-bit precision)
+- **CPU fallback**: AVX2 SIMD (4-lane double), multi-threaded — works on any PC without a dedicated GPU
+
+### Stunning Visuals
+- **6 color themes**: Red, Green, Blue, Cyan, Magenta, Gold — shuffled randomly each run
+- **4 coloring styles**: Smooth Gradient, Contour Bands, Stripe Average, Triangle Inequality Average (TIA)
+- **24 visual combinations**: 6 themes x 4 styles, all shuffled for maximum variety
+- **Auto color cycling**: colors rotate every frame for endlessly shifting palettes
+- **2x2 supersampled anti-aliasing**: silky smooth edges at every zoom level
+- **Up to 16,384x zoom**: deep dives into fractal structure with double-float precision
+
+### Smart Zoom Animation
+- **100 interesting locations** in 15 categories — never boring
+- **Boundary tracking**: the camera automatically follows the most visually complex edges
+- **Adaptive redirect**: mid-zoom direction changes seek out nearby intricate patterns
+- **Curvature filtering**: flat, featureless boundaries are automatically skipped
+
+### Overlay & Clock
+- **System info overlay**: GPU/CPU model, RAM, resolution, FPS, zoom level, iteration count
+- **7-segment digital clock**: bouncing LED-style display with premultiplied alpha blending
+
+### Lightweight & Self-Contained
+- **Single file** (~325 KB .scr) — no runtime dependencies, no .NET, no Java
+- **Static CRT** (/MT) — runs on a clean Windows install
+- **One-click installer** (~459 KB) with auto UAC elevation
+- **Zero external dependencies** — everything is built from scratch in C++20
+
+---
 
 ## System Requirements
 
-- Windows 10/11 (64-bit)
-- DirectX 11 compatible GPU (recommended) or AVX2 capable CPU
-- Minimum 512MB GPU memory (for GPU mode)
+| Component | Minimum |
+|-----------|---------|
+| OS | Windows 10 / 11 (64-bit) |
+| CPU | Intel Haswell (2013+) or AMD Excavator (2015+) with AVX2 |
+| GPU | Any DirectX 11 capable GPU (optional — CPU fallback available) |
+| RAM | 64 MB free |
+| Disk | < 1 MB |
 
-## Screenshots
+---
 
-![Fractal boundary with branching structures](screenshots/screenshot1.png)
+## Installation
 
-![Deep zoom into fractal coastline](screenshots/screenshot2.png)
+### Option 1: Installer (Recommended)
+1. Download `fractal_screensaver_v1_install.exe`
+2. Double-click to run — UAC will auto-elevate
+3. The Screen Saver Settings dialog opens automatically
 
-## Support
+To uninstall: run the installer with `/u` flag or use the standard Windows uninstaller.
 
-If you enjoy this screensaver, consider supporting the project:
+### Option 2: Manual Install
+1. Download `FractalSaver.scr`
+2. Right-click → **Install**
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jogakdal)
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-ea4aaa?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/jogakdal)
+### Option 3: Preview Without Installing
+```
+FractalSaver.scr /s
+```
+
+---
+
+## Settings
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| Rendering | GPU (auto) / Force CPU | GPU auto |
+| Zoom Speed | 1 (slow) ~ 10 (fast) | 3 |
+| Color Style | Auto Cycle / Smooth / Contour / Stripe / TIA | Auto Cycle |
+| Info Overlay | On / Off | On |
+| Digital Clock | On / Off | Off |
+
+---
+
+## Technical Highlights
+
+- **C++20** with MSVC Build Tools 2022
+- **D3D11 Compute Shader** (cs_5_0) with `precise` keyword and IEEE strictness for numerical accuracy
+- **AVX2 intrinsics** (`__m256d`) — 4 pixels computed simultaneously
+- **Double-float emulation** on GPU: Dekker splitting for ~48-bit mantissa precision
+- **Cardioid/Period-2 bulb early rejection** — SIMD-accelerated, skips most interior points without iteration
+- **One-pass row rendering** with stack-allocated buffers (~40 KB in L1 cache vs. 132 MB heap)
+- **Exponential zoom** with adaptive panning and boundary-aware target tracking
+- **Binary search boundary detection** (30~50 iterations, precision ~10^-9 to ~10^-15)
+- **PCA-based curvature analysis** to filter out visually uninteresting boundaries
+- **Whole Program Optimization** (/GL + /LTCG) and Link-Time Code Generation
+
+---
+
+## The Math Behind the Beauty
+
+FractalSaver computes the classic Mandelbrot iteration **z = z² + c** for every pixel, with several enhancements:
+
+- **Smooth iteration count**: `n + 1 - log₂(log₂(|z|))` eliminates color banding
+- **Cosine palette**: Inigo Quilez-style color generation with per-channel phase offsets
+- **Orbit traps** (Stripe/TIA): accumulate angular and radial orbit statistics for rich texturing
+- **Interior coloring**: average orbit magnitude creates pseudo-iteration values for non-escaping points
+- **Dynamic max iterations**: `100 + 50 × log₂(zoom)`, capped at 5000
+
+---
+
+## Download
+
+- **GitHub**: https://github.com/jogakdal/fractal-screensaver/releases
+- **WinCustomize**: https://www.wincustomize.com/explore/screensavers/1693/
+
+---
+
+## Support the Developer
+
+If you enjoy FractalSaver, consider supporting its development:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jogakdal)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/jogakdal)
+
+---
 
 ## Author
 
-Yongho Hwang ([@jogakdal](https://github.com/jogakdal))
+**Yongho Hwang** ([@jogakdal](https://github.com/jogakdal))
+
+- **Blog (Velog)**: https://velog.io/@jogakdal
+- **Blog (Naver)**: https://blog.naver.com/jogakdal
+
+---
 
 ## License
 
 All rights reserved. This software is provided as-is for personal use.
+
+---
+
+*FractalSaver — Where mathematics meets art.*
