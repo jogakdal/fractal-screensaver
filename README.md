@@ -72,7 +72,7 @@ Every run is unique. The visit order is shuffled, zoom targets are randomly offs
 
 ## Installation
 
-1. Download `FractalSaver.exe` from the [Releases](https://github.com/jogakdal/fractal-screensaver/releases) page
+1. Download [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe)
 2. Double-click to run — UAC will auto-elevate and install the screen saver
 3. The Screen Saver Settings dialog opens automatically
 
@@ -123,8 +123,13 @@ FractalSaver computes the classic Mandelbrot iteration **z = z² + c** for every
 
 ## Download
 
-- **GitHub**: https://github.com/jogakdal/fractal-screensaver/releases
-- **WinCustomize**: https://www.wincustomize.com/explore/screensavers/1693/
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe) |
+| **Lite** | Half resolution, 30 fps cap — for older PCs | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaverLite.exe) |
+
+- [All releases](https://github.com/jogakdal/fractal-screensaver/releases)
+- [WinCustomize](https://www.wincustomize.com/explore/screensavers/1693/)
 
 ---
 
