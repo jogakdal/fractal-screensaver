@@ -72,7 +72,7 @@ FractalSaver는 만델브로 집합을 실시간으로 렌더링하는 무료 Wi
 
 ## 설치 방법
 
-1. [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe) 다운로드
+1. `FractalSaver.exe` [다운로드](#다운로드) (저사양 PC는 `FractalSaverLite.exe`)
 2. 더블클릭으로 실행 — UAC 자동 상승 후 스크린세이버 설치
 3. 화면 보호기 설정 대화상자가 자동으로 열림
 

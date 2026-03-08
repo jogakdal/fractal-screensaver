@@ -72,7 +72,7 @@ Every run is unique. The visit order is shuffled, zoom targets are randomly offs
 
 ## Installation
 
-1. Download [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe)
+1. [Download](#download) `FractalSaver.exe` (or `FractalSaverLite.exe` for older PCs)
 2. Double-click to run — UAC will auto-elevate and install the screen saver
 3. The Screen Saver Settings dialog opens automatically
 
