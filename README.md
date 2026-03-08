@@ -49,9 +49,9 @@ Every run is unique. The visit order is shuffled, zoom targets are randomly offs
 - **7-segment digital clock**: bouncing LED-style display with premultiplied alpha blending
 
 ### Lightweight & Self-Contained
-- **Single file** (~325 KB .scr) — no runtime dependencies, no .NET, no Java
+- **Single file** (~446 KB .exe) — no runtime dependencies, no .NET, no Java
 - **Static CRT** (/MT) — runs on a clean Windows install
-- **One-click installer** (~459 KB) with auto UAC elevation
+- **Built-in installer** — auto UAC elevation, no separate installer needed
 - **Zero external dependencies** — everything is built from scratch in C++20
 
 ---
@@ -70,21 +70,13 @@ Every run is unique. The visit order is shuffled, zoom targets are randomly offs
 
 ## Installation
 
-### Option 1: Installer (Recommended)
-1. Download `fractal_screensaver_v1_install.exe`
-2. Double-click to run — UAC will auto-elevate
+1. Download `FractalSaver.exe` from the [Releases](https://github.com/jogakdal/fractal-screensaver/releases) page
+2. Double-click to run — UAC will auto-elevate and install the screen saver
 3. The Screen Saver Settings dialog opens automatically
 
-To uninstall: run the installer with `/u` flag or use the standard Windows uninstaller.
+To preview without installing: `FractalSaver.exe /s`
 
-### Option 2: Manual Install
-1. Download `FractalSaver.scr`
-2. Right-click → **Install**
-
-### Option 3: Preview Without Installing
-```
-FractalSaver.scr /s
-```
+To uninstall: `FractalSaver.exe /u` or use Windows standard uninstaller
 
 ---
 
