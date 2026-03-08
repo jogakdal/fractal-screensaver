@@ -146,6 +146,7 @@ If you enjoy FractalSaver, consider supporting its development:
 
 **Yongho Hwang** ([@jogakdal](https://github.com/jogakdal))
 
+- **Email**: jogakdal@gmail.com
 - **Blog (Velog)**: https://velog.io/@jogakdal
 - **Blog (Naver)**: https://blog.naver.com/jogakdal
 
