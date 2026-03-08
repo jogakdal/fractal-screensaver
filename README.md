@@ -1,5 +1,7 @@
 # FractalSaver — Real-Time Mandelbrot Zoom Screen Saver for Windows
 
+🌐 [한국어](README.ko.md)
+
 > Turn your idle screen into an infinite journey through the Mandelbrot set.
 
 ---
