@@ -11,12 +11,12 @@
 - **Multi-monitor emulation**: `/emu` (dual) or `/emu:N` (N=2~4) for testing multi-monitor layouts on a single display
 
 ### Improvements
-- **Color channel shuffle**: 6 color channels (R/G/B/C/M/Gold) now shuffle per target instead of cycling sequentially
-- **Screenshot format**: changed from BMP to PNG for smaller file size
 - **Overlay readability**: double-outline text rendering for visibility on any background (bright/dark)
+- **Locale-aware update link**: Korean locale users directed to CHANGELOG.ko.md
+- **Auto-kill on install**: existing screensaver processes terminated automatically before installation
 
-### Bug Fixes
-- Fixed desk.cpl preview window starting with black screen
+### Changes
+- Replaced unnecessary non-ASCII characters with ASCII equivalents in comments and docs
 
 ## v1.2.0 (2026-03-04)
 
@@ -35,6 +35,10 @@
   - AV-friendly: no resource embedding patterns
 
 ### Improvements
+- **Framework/content separation**: ScreenSaverEngine + IScreenSaverContent architecture, framework extracted to wsse.lib
+- **Feature flags**: hasOverlay, hasClock, hasAutoUpdate in AppDescriptor
+- **Color channel shuffle**: 6 color channels (R/G/B/C/M/Gold) shuffled per target
+- **Screenshot format**: changed from BMP to PNG (GDI+ encoder)
 - **Color style shuffle**: randomized instead of sequential cycling
 - **Redesigned settings dialog**: Zoom Speed slider (1~10), Color Style combo box, Overlay/Clock checkboxes
 - **Performance**: CPU and GPU optimizations (SIMD early rejection, FMA3, one-pass rendering, conditional orbit trap)
@@ -44,6 +48,7 @@
 - **Static CRT**: no Visual C++ runtime dependency
 
 ### Bug Fixes
+- Fixed desk.cpl preview window starting with black screen (ZoomAnimator SkipFadeIn)
 - Fixed color discontinuity at interior/exterior boundary
 - Fixed teleport artifact when zoom direction reverses
 - Fixed mouse cursor not showing during settings dialog
