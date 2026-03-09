@@ -46,12 +46,21 @@ Every run is unique. The visit order is shuffled, zoom targets are randomly offs
 - **Adaptive redirect**: mid-zoom direction changes seek out nearby intricate patterns
 - **Curvature filtering**: flat, featureless boundaries are automatically skipped
 
+### Multi-Monitor Support
+- **Automatic primary selection**: renders on the largest monitor, mirrors to all others with aspect-ratio-preserving center crop
+- **Secondary monitors**: lightweight mirror windows with input handling, cursor hiding, and 2-second grace period
+- **Emulation mode**: `/emu` (dual) or `/emu:N` (N=2~4) for testing multi-monitor layouts on a single display
+
 ### Overlay & Clock
-- **System info overlay**: GPU/CPU model, RAM, resolution, FPS, zoom level, iteration count
+- **System info overlay**: GPU/CPU model, RAM, resolution, FPS, zoom level, iteration count — readable on any background with double-outline rendering
 - **7-segment digital clock**: bouncing LED-style display with premultiplied alpha blending
 
+### Unified Installer
+- **Single binary**: installer + screen saver combined — extension-based mode detection (.exe=install, .scr=screensaver)
+- **AV-friendly**: no RCDATA embedding (dropper pattern), uses CopyFileW(self) instead
+
 ### Lightweight & Self-Contained
-- **Single file** (~446 KB .exe) — no runtime dependencies, no .NET, no Java
+- **Single file** (~453 KB .exe) — no runtime dependencies, no .NET, no Java
 - **Static CRT** (/MT) — runs on a clean Windows install
 - **Built-in installer** — auto UAC elevation, no separate installer needed
 - **Zero external dependencies** — everything is built from scratch in C++20
