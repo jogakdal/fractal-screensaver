@@ -9,9 +9,6 @@
   - Overlay and clock displayed on primary monitor only
   - Single monitor works exactly as before
 - **Multi-monitor emulation**: `/emu` (dual) or `/emu:N` (N=2~4) for testing multi-monitor layouts on a single display
-- **Unified binary**: installer + screen saver combined in a single executable
-  - Extension-based mode detection (.exe=install, .scr=screensaver)
-  - AV-friendly: no resource embedding patterns
 
 ### Improvements
 - **Color channel shuffle**: 6 color channels (R/G/B/C/M/Gold) now shuffle per target instead of cycling sequentially
@@ -33,6 +30,9 @@
 - **Periodic screenshots**: `/screenshot:interval[:folder]` command-line option
 - **Auto update check**: background check via GitHub Releases API, manual check in settings dialog
 - **Lite edition**: half resolution + 30 fps cap for older PCs and integrated GPUs
+- **Unified binary**: installer + screen saver combined in a single executable
+  - Extension-based mode detection (.exe=install, .scr=screensaver)
+  - AV-friendly: no resource embedding patterns
 
 ### Improvements
 - **Color style shuffle**: randomized instead of sequential cycling
