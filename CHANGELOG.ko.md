@@ -22,6 +22,12 @@
 - **GPU Device Lost 자동 복구**: GPU 장치 손실 감지 시 CPU 렌더링으로 자동 전환
 - **장시간 실행 안정성**: ZoomAnimator 비동기 data race 제거, _malloca null 체크, RenderSurface 재생성 시 리소스 누수 방지
 
+### 다운로드
+| 에디션 | 설명 | 다운로드 |
+|--------|------|----------|
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite.exe) |
+
 ## v1.2.1 (2026-03-09)
 
 ### 신규 기능

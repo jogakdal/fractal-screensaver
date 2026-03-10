@@ -22,6 +22,12 @@
 - **GPU Device Lost recovery**: auto-fallback to CPU rendering on device loss
 - **Long-run stability**: ZoomAnimator async data race fix, _malloca null check, RenderSurface resource leak prevention
 
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite.exe) |
+
 ## v1.2.1 (2026-03-09)
 
 ### New Features
