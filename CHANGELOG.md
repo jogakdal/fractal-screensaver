@@ -2,6 +2,26 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.2.2 (2026-03-11)
+
+### New Features
+- **Animation toggle**: independently enable/disable fractal rendering, overlay, and clock
+  - New checkbox in Display group of settings dialog (all 7 languages)
+  - Real-time toggle via F1 settings during screensaver
+
+### Improvements
+- **Overlay text visibility**: two-pass shadow + text AlphaBlend compositing
+  - Pass 1: dark shadow for contrast on bright backgrounds
+  - Pass 2: semi-transparent white text for readability on dark backgrounds
+  - 32-bit DIB + premultiplied alpha (same pipeline as clock)
+- **Clock bounce direction**: always diagonal (45/135/225/315 degrees)
+- **Clock colon blinking**: precise 1-second cycle (0.5s on / 0.5s off)
+- **Overlay text order**: changed from GPU-CPU-RAM to CPU-RAM-GPU
+- **F1 help text**: simplified to "F1: Settings" (all 7 languages)
+- **GPU TDR prevention**: Compute Shader dispatched in 64-row chunks with Flush()
+- **GPU Device Lost recovery**: auto-fallback to CPU rendering on device loss
+- **Long-run stability**: ZoomAnimator async data race fix, _malloca null check, RenderSurface resource leak prevention
+
 ## v1.2.1 (2026-03-09)
 
 ### New Features
