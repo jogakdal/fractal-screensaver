@@ -2,17 +2,6 @@
 
 [English](CHANGELOG.md)
 
-## 최신 버전 다운로드
-
-| 에디션 | 설명 | 다운로드 |
-|--------|------|----------|
-| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe) |
-| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaverLite.exe) |
-
-> 위 링크는 항상 최신 릴리스를 가리킵니다. [전체 릴리스 목록](https://github.com/jogakdal/fractal-screensaver/releases)
-
----
-
 ## v1.2.2 (2026-03-11)
 
 ### 신규 기능
