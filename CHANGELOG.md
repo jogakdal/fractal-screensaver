@@ -2,6 +2,17 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## Latest Download
+
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaver.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/latest/download/FractalSaverLite.exe) |
+
+> These links always point to the latest release. [All releases](https://github.com/jogakdal/fractal-screensaver/releases)
+
+---
+
 ## v1.2.2 (2026-03-11)
 
 ### New Features
