@@ -36,8 +36,8 @@
 ### Downloads
 | Edition | Description | Download |
 |---------|-------------|----------|
-| **Full** | Native resolution, uncapped FPS | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver.exe) |
-| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite.exe) |
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.2.2.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver_v1.2.2.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.2.2.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite_v1.2.2.exe) |
 
 ## v1.2.1 (2026-03-09)
 

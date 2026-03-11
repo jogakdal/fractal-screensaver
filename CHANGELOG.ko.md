@@ -36,8 +36,8 @@
 ### 다운로드
 | 에디션 | 설명 | 다운로드 |
 |--------|------|----------|
-| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver.exe) |
-| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite.exe) |
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.2.2.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaver_v1.2.2.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.2.2.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.2/FractalSaverLite_v1.2.2.exe) |
 
 ## v1.2.1 (2026-03-09)
 
