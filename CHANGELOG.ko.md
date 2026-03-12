@@ -2,6 +2,28 @@
 
 [English](CHANGELOG.md)
 
+## v1.2.4 (2026-03-13)
+
+### 개선
+- **설정 다이얼로그 리디자인**: 그룹박스 레이아웃에서 TaskDialog 스타일 디자인으로 전환
+  - 앱 이름 + 버전이 표시되는 흰색 헤더 패널
+  - 그룹박스 대신 볼드 섹션 라벨 적용
+  - 디스플레이 섹션을 최상단으로 이동하여 접근성 향상
+  - "프랙탈 렌더링" 체크 해제 시 렌더링/애니메이션 섹션 비활성화
+- **제작자/후원 정보**: 설정 다이얼로그 하단에 제작자 링크 및 후원 버튼 추가
+  - 블로그 링크 (Velog, 티스토리, 네이버 블로그) 및 이메일 링크
+  - 후원 링크 (Buy Me a Coffee, GitHub Sponsors)
+  - SysLink 컨트롤 자동 중앙 정렬, 흰색 배경 패널
+- **체크박스 캡션 변경** (7개 언어):
+  - "애니메이션 표시" -> "프랙탈 렌더링"
+  - "오버레이 표시 (줌 / FPS)" -> "안내 문구 표시"
+
+### 다운로드
+| 에디션 | 설명 | 다운로드 |
+|--------|------|----------|
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.2.4.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.4/FractalSaver_v1.2.4.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.2.4.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.4/FractalSaverLite_v1.2.4.exe) |
+
 ## v1.2.3 (2026-03-12)
 
 ### 개선

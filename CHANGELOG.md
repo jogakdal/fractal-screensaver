@@ -2,6 +2,28 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.2.4 (2026-03-13)
+
+### Improvements
+- **Settings dialog redesign**: migrated from groupbox layout to TaskDialog-style visual design
+  - White header panel displaying app title and version
+  - Bold section labels replace traditional groupboxes
+  - Display section moved to the top for easier access
+  - "Fractal rendering" toggle now disables both Rendering and Animation sections when unchecked
+- **Author & sponsor info**: new footer area in settings dialog with author links and sponsor buttons
+  - Blog links (Velog, Tistory, Naver Blog) and mailto contact
+  - Sponsor links (Buy Me a Coffee, GitHub Sponsors)
+  - SysLink controls with automatic centering, white background panel
+- **Checkbox captions updated** across all 7 languages:
+  - "Show animation" -> "Fractal rendering"
+  - "Show overlay (zoom / FPS)" -> "Show info text"
+
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.2.4.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.4/FractalSaver_v1.2.4.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.2.4.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.4/FractalSaverLite_v1.2.4.exe) |
+
 ## v1.2.3 (2026-03-12)
 
 ### Improvements
