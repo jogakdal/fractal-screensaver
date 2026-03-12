@@ -2,6 +2,21 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.2.3 (2026-03-12)
+
+### Improvements
+- **CPU usage in overlay**: moved from the dynamic info line to the CPU spec line
+  - Now displayed as "CPU: Intel Core i7-... (15% in use)" (localized for all 7 languages)
+  - Dynamic line simplified to: Render / Zoom / FPS / Style / Path
+- **CPU usage updates when rendering is off**: previously froze at the last measured value when animation was disabled via settings
+- **Overlay when rendering is off**: the dynamic info line (render/zoom/FPS/style) is hidden when animation is disabled, showing only system info and CPU usage
+
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.2.3.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.3/FractalSaver_v1.2.3.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.2.3.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.3/FractalSaverLite_v1.2.3.exe) |
+
 ## v1.2.2 (2026-03-11)
 
 ### New Features

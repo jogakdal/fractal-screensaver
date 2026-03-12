@@ -2,6 +2,21 @@
 
 [English](CHANGELOG.md)
 
+## v1.2.3 (2026-03-12)
+
+### 개선
+- **CPU 사용률 표시 위치 변경**: 동적 정보 라인에서 CPU 제원 라인으로 이동
+  - "CPU: Intel Core i7-... (15% 사용 중)" 형태로 표시 (7개 언어 지원)
+  - 동적 라인 간소화: 렌더 / 줌 / FPS / 스타일 / 경로
+- **렌더링 비활성 시 CPU 사용률 갱신**: 설정에서 애니메이션을 끄면 CPU 사용률이 마지막 값에 고정되던 문제 수정
+- **렌더링 비활성 시 오버레이**: 애니메이션이 꺼져 있을 때 렌더링 관련 동적 정보 라인을 숨기고 시스템 정보와 CPU 사용률만 표시
+
+### 다운로드
+| 에디션 | 설명 | 다운로드 |
+|--------|------|----------|
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.2.3.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.3/FractalSaver_v1.2.3.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.2.3.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.2.3/FractalSaverLite_v1.2.3.exe) |
+
 ## v1.2.2 (2026-03-11)
 
 ### 신규 기능
