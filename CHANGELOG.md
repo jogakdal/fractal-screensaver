@@ -2,6 +2,38 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.3.0 (2026-03-27)
+
+### New Features
+- **Waypoint zoom paths**: zoom target coordinates automatically change at specific zoom depths, following curated routes
+
+### Improvements
+- **CPU-only rendering**: GPU render mode completely removed; unified to AVX2 SIMD multithreaded CPU rendering
+  - Consistent zoom interpolation quality with no inter-frame jumps
+- **Brent cycle detection**: early exit for interior pixels in all mini-bulbs (activates after iteration 32)
+- **ColorPalette LUT optimization**: cos/log/exp replaced with lookup tables + linear interpolation
+- **TIA accuracy**: changed from squared approximation to exact sqrt-based triangle inequality formula
+- **Zoom interpolation method**: switched from source crop to destination enlargement (eliminates integer truncation jitter)
+- **Render-time-based zoom deceleration**: automatically slows zoom when render time increases, maintaining interpolation quality
+- **39 verified routes**: slow routes removed via render cost testing, fast deep-zoom routes restored, 6 routes hand-tuned with waypoints
+- **Longer fade in/out**: increased from 0.4s to 1.1s for more visible transitions
+- **CPU multithread batching**: 4-row batch fetch_add reduces atomic contention
+- **maxIter rounded to 100**: eliminates per-frame maxIter fluctuation for TIA orbit trap stability
+- **Faster shutdown**: worker threads check cancellation flag during row rendering for immediate exit
+- **GPU usage display removed**: GPU load measurement/display disabled for CPU-only mode
+- **Dead code cleanup**: removed boundary tracking, redirect, curvature detection and related constants/variables
+
+### Bug Fixes
+- Fixed deep zoom (10^8+) screen warping to another region then snapping back (interpolation zoomRatio clamped from 3.0 to 8.0)
+- Fixed exterior pixels at RGB(0,0,0) being treated as transparent by TransparentBlt (minimum brightness guaranteed)
+- Added `/style:N` command-line option for forcing a specific color style
+
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaver_v1.3.0.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaverLite_v1.3.0.exe) |
+
 ## v1.2.4 (2026-03-13)
 
 ### Improvements
