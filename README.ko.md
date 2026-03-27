@@ -153,6 +153,7 @@ FractalSaver가 마음에 드셨다면, 개발을 후원해 주세요:
 
 - **이메일**: jogakdal@gmail.com / jogakdal@naver.com
 - **블로그 (Velog)**: https://velog.io/@jogakdal
+- **블로그 (Tistory)**: https://crescent-moon.tistory.com/
 - **블로그 (Naver)**: https://blog.naver.com/jogakdal
 
 ---

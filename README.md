@@ -153,6 +153,7 @@ If you enjoy FractalSaver, consider supporting its development:
 
 - **Email**: jogakdal@gmail.com / jogakdal@naver.com
 - **Blog (Velog)**: https://velog.io/@jogakdal
+- **Blog (Tistory)**: https://crescent-moon.tistory.com/
 - **Blog (Naver)**: https://blog.naver.com/jogakdal
 
 ---
