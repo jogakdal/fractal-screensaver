@@ -34,6 +34,24 @@
 | **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaver_v1.3.0.exe) |
 | **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaverLite_v1.3.0.exe) |
 
+### Installation
+
+1. Download **FractalSaver_v1.3.0.exe** (or Lite version) from the table above
+2. Run the downloaded .exe file
+3. Click **"Install"** in the launcher dialog
+   - Administrator privileges will be requested automatically (UAC)
+   - The screensaver is copied to System32 and registered
+   - The Windows Screen Saver Settings dialog opens automatically
+4. Select **"Fractal"** from the dropdown and click **Apply**
+
+To **uninstall**, run the same .exe again and click "Uninstall", or run with `/u` flag from command line.
+
+To **preview** without installing, click "Preview" in the launcher dialog, or run: `FractalSaver_v1.3.0.exe /s`
+
+### System Requirements
+- Windows 10 or later
+- AVX2-capable CPU (Intel Haswell 2013+ / AMD Excavator 2015+)
+
 ## v1.2.4 (2026-03-13)
 
 ### Improvements

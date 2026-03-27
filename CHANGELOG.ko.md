@@ -34,6 +34,24 @@
 | **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaver_v1.3.0.exe) |
 | **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.3.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.0/FractalSaverLite_v1.3.0.exe) |
 
+### 설치 방법
+
+1. 위 표에서 **FractalSaver_v1.3.0.exe** (또는 Lite 버전) 다운로드
+2. 다운로드한 .exe 파일 실행
+3. 런처 다이얼로그에서 **"설치"** 클릭
+   - 관리자 권한이 자동으로 요청됩니다 (UAC)
+   - 스크린세이버가 System32에 복사/등록됩니다
+   - Windows 화면 보호기 설정 창이 자동으로 열립니다
+4. 드롭다운에서 **"Fractal"** 선택 후 **적용** 클릭
+
+**제거**: 동일한 .exe를 다시 실행하여 "제거" 클릭, 또는 명령행에서 `/u` 플래그로 실행
+
+**미리보기**: 런처 다이얼로그에서 "미리보기" 클릭, 또는 `FractalSaver_v1.3.0.exe /s` 실행
+
+### 시스템 요구사항
+- Windows 10 이상
+- AVX2 지원 CPU (Intel Haswell 2013+ / AMD Excavator 2015+)
+
 ## v1.2.4 (2026-03-13)
 
 ### 개선
