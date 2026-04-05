@@ -2,6 +2,20 @@
 
 [English](CHANGELOG.md)
 
+## v1.3.1 (2026-04-05)
+
+### 버그 수정
+- 듀얼 모니터 환경에서 보조 모니터 화면 깜빡임 수정
+  - 미러 창에 백버퍼 추가하여 WM_PAINT 시 안정적 출력
+  - 미러 창 업데이트를 프레임 합성 완료 후로 이동 (비동기 렌더 중 반쯤 그려진 서피스 읽기 방지)
+  - 미러 창의 불필요한 CS_HREDRAW|CS_VREDRAW 스타일 제거
+
+### 다운로드
+| 에디션 | 설명 | 다운로드 |
+|--------|------|----------|
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.3.1.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.1/FractalSaver_v1.3.1.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.3.1.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.1/FractalSaverLite_v1.3.1.exe) |
+
 ## v1.3.0 (2026-03-27)
 
 ### 신규 기능

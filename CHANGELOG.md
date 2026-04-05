@@ -2,6 +2,20 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.3.1 (2026-04-05)
+
+### Bug Fixes
+- Fixed screen flickering on secondary monitor in multi-monitor setups
+  - Added back buffer to mirror windows for flicker-free WM_PAINT handling
+  - Moved mirror window update to after frame compositing (prevents reading half-rendered surface)
+  - Removed unnecessary CS_HREDRAW|CS_VREDRAW window style from mirror windows
+
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.3.1.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.1/FractalSaver_v1.3.1.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.3.1.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.3.1/FractalSaverLite_v1.3.1.exe) |
+
 ## v1.3.0 (2026-03-27)
 
 ### New Features
