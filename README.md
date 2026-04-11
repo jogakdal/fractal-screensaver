@@ -87,6 +87,27 @@ To preview without installing: click **"Preview"** in the launcher, or run `Frac
 
 To uninstall: run the same .exe again and click **"Uninstall"**, or run with `/u` flag
 
+### About the SmartScreen warning
+
+When you launch the downloaded `.exe`, Windows may display:
+
+> **Windows protected your PC**
+> Microsoft Defender SmartScreen prevented an unrecognized app from starting.
+
+This happens because FractalSaver is **not code-signed** (code signing certificates cost $70~600/year, which is impractical for a small free project). The file itself is safe — it's just unknown to Microsoft's reputation database.
+
+**To run it anyway**:
+1. On the warning dialog, click **"More info"**
+2. A **"Run anyway"** button appears — click it
+3. The launcher opens normally and behaves identically from this point on
+
+Alternatively, you can unblock the file before running:
+1. Right-click the downloaded `.exe` → **Properties**
+2. At the bottom of the General tab, check **"Unblock"** → **OK**
+3. Double-click the file — no more warning
+
+You only need to do this once per downloaded file.
+
 ---
 
 ## Settings
@@ -94,7 +115,7 @@ To uninstall: run the same .exe again and click **"Uninstall"**, or run with `/u
 | Setting | Options | Default |
 |---------|---------|---------|
 | Zoom Speed | 1 (slow) ~ 10 (fast) | 8 |
-| Color Style | Auto Cycle / Smooth / Contour / Stripe / TIA / Classic | Auto Cycle |
+| Color Style | Auto Cycle / Smooth / Contour / Stripe / TIA / Classic / Sculpted 3D | Auto Cycle |
 | Fractal Rendering | On / Off | On |
 | Info Overlay | On / Off | On |
 | Digital Clock | On / Off | Off |
