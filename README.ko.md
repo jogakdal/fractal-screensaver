@@ -34,8 +34,8 @@ FractalSaver는 만델브로 집합을 실시간으로 렌더링하는 무료 Wi
 
 ### 아름다운 비주얼
 - **6가지 색상 테마**: Red, Green, Blue, Cyan, Magenta, Gold — 매 실행마다 랜덤 셔플
-- **5가지 컬러링 스타일**: Smooth Gradient, Contour Bands, Stripe Average, Triangle Inequality Average (TIA), Classic
-- **30가지 시각적 조합**: 6 테마 x 5 스타일, 모두 셔플되어 최대한의 다양성 제공
+- **6가지 컬러링 스타일**: Smooth Gradient, Contour Bands, Stripe Average, Triangle Inequality Average (TIA), Classic, **Sculpted 3D** (DE 기반 표면 법선 + Blinn-Phong)
+- **36가지 시각적 조합**: 6 테마 x 6 스타일, 모두 셔플되어 최대한의 다양성 제공
 - **자동 컬러 순환**: 매 프레임마다 색상이 회전하여 끝없이 변화하는 팔레트
 - **2x2 슈퍼샘플링 안티앨리어싱**: 모든 줌 레벨에서 부드러운 경계
 

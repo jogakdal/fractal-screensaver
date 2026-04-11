@@ -2,6 +2,36 @@
 
 [한국어](CHANGELOG.ko.md)
 
+## v1.4.0 (2026-04-11)
+
+### New Features
+- **Sculpted 3D color style** (6th style) — mathematically accurate surface normals give the fractal boundary a true 3D relief appearance
+  - Distance Estimator (DE) partial derivative: dc_{n+1} = 2*z_n*dc_n + 1 accumulated per iteration
+  - On escape, u = z/dc complex division yields a unit 2D surface normal in screen space
+  - External terrain is blended in from the spatial gradient of smoothIter (potential function) so the area outside the set also gains smooth relief
+  - Blinn-Phong shading: ambient 0.18 + diffuse 0.55*(N·L) + specular 0.55*(N·H)^16
+  - Light L = (-0.5, -0.4, 0.7681), halfway H pre-computed as a constant
+  - 2x2 supersamples carry independent normals, giving free anti-aliasing on the silhouette
+  - Available via settings dropdown (7th item) or `/style:6` command line
+
+### Improvements
+- **PerturbationSIMD** extended with AVX2 dc partial-derivative lanes (vDcr/vDci)
+  - `needsNormal` flag ensures other styles pay zero cost (only 4 MUL + 2 FMA per iteration when style 6 is active)
+  - Scalar fallback also updated to match
+  - `ComputeRowDirect` signature extended with `normalXOut`/`normalYOut` output buffers
+- **ColorPalette::kInteriorEpsilon** promoted to a shared public constant (used by both ColorPalette and PerturbationSIMD)
+
+### Bug Fixes
+- Silenced two long-standing compiler warnings
+  - `ZoomAnimator` C4456: shadowed `zoomDepth` in waypoint block renamed to `curZoomDepth`
+  - `FractalContent` C4996: `_wfopen` replaced with `_wfopen_s`
+
+### Downloads
+| Edition | Description | Download |
+|---------|-------------|----------|
+| **Full** | Native resolution, uncapped FPS | [**FractalSaver_v1.4.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.4.0/FractalSaver_v1.4.0.exe) |
+| **Lite** | Half resolution, 30 fps cap | [**FractalSaverLite_v1.4.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.4.0/FractalSaverLite_v1.4.0.exe) |
+
 ## v1.3.1 (2026-04-05)
 
 ### Bug Fixes

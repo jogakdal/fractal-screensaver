@@ -34,8 +34,8 @@ Every run is unique. The visit order is shuffled, color themes and styles are ra
 
 ### Stunning Visuals
 - **6 color themes**: Red, Green, Blue, Cyan, Magenta, Gold — shuffled randomly each run
-- **5 coloring styles**: Smooth Gradient, Contour Bands, Stripe Average, Triangle Inequality Average (TIA), Classic
-- **30 visual combinations**: 6 themes x 5 styles, all shuffled for maximum variety
+- **6 coloring styles**: Smooth Gradient, Contour Bands, Stripe Average, Triangle Inequality Average (TIA), Classic, **Sculpted 3D** (DE-based surface normals + Blinn-Phong)
+- **36 visual combinations**: 6 themes x 6 styles, all shuffled for maximum variety
 - **Auto color cycling**: colors rotate every frame for endlessly shifting palettes
 - **2x2 supersampled anti-aliasing**: silky smooth edges at every zoom level
 

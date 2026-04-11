@@ -2,6 +2,36 @@
 
 [English](CHANGELOG.md)
 
+## v1.4.0 (2026-04-11)
+
+### 신규 기능
+- **Sculpted 3D 컬러 스타일 추가** (6번째 스타일) — 수학적으로 정확한 표면 법선으로 프랙탈 경계가 진짜 3D 부조처럼 보임
+  - Distance Estimator(DE) 편미분: 매 반복마다 dc_{n+1} = 2*z_n*dc_n + 1 누적
+  - 탈출 시 u = z/dc 복소수 나눗셈으로 화면 공간 2D 법선 벡터 획득
+  - smoothIter 공간 그래디언트(포텐셜 함수)를 외부 지형으로 합성하여 집합 바깥 영역에도 매끄러운 부조 효과
+  - Blinn-Phong 셰이딩: ambient 0.18 + diffuse 0.55*(N·L) + specular 0.55*(N·H)^16
+  - 광원 L = (-0.5, -0.4, 0.7681), halfway H 사전 상수화
+  - 2x2 슈퍼샘플이 각각 독립 법선을 가져 실루엣에 AA가 자연스럽게 적용됨
+  - 설정 드롭다운 7번째 항목 또는 명령행 `/style:6`으로 선택
+
+### 개선
+- **PerturbationSIMD**에 AVX2 dc 편미분 레인(vDcr/vDci) 추가
+  - `needsNormal` 플래그로 다른 스타일 성능 영향 없음 (스타일 6일 때만 반복당 4 MUL + 2 FMA 추가)
+  - 스칼라 폴백도 동일 로직
+  - `ComputeRowDirect` 시그니처에 `normalXOut`/`normalYOut` 출력 버퍼 추가
+- **ColorPalette::kInteriorEpsilon** 공통 public 상수화 (ColorPalette와 PerturbationSIMD가 공유)
+
+### 버그 수정
+- 오래된 컴파일 경고 2건 해소
+  - `ZoomAnimator` C4456: 웨이포인트 블록의 shadowed `zoomDepth`를 `curZoomDepth`로 개명
+  - `FractalContent` C4996: `_wfopen`을 `_wfopen_s`로 교체
+
+### 다운로드
+| 에디션 | 설명 | 다운로드 |
+|--------|------|----------|
+| **Full** | 네이티브 해상도, FPS 제한 없음 | [**FractalSaver_v1.4.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.4.0/FractalSaver_v1.4.0.exe) |
+| **Lite** | 절반 해상도, 30fps 제한 | [**FractalSaverLite_v1.4.0.exe**](https://github.com/jogakdal/fractal-screensaver/releases/download/v1.4.0/FractalSaverLite_v1.4.0.exe) |
+
 ## v1.3.1 (2026-04-05)
 
 ### 버그 수정
